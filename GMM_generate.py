@@ -28,9 +28,6 @@ for i in range(K):
     iw_rvs = invwishart.rvs(df, scale)*10
     covariances.append(iw_rvs)
 
-print(means)
-print(covariances)
-
 #alpha ~ hyperparamenter of theta
 #theta ~ Dirichlet(alpha)
 alpha = [100] * K
@@ -64,5 +61,4 @@ for i in range(N):
     fig.canvas.draw_idle()
     plt.pause(0.05)
 
-print(theta)
 plt.waitforbuttonpress()
